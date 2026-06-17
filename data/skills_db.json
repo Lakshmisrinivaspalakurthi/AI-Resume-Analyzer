@@ -1,0 +1,23 @@
+{
+  "Data Analyst": [
+    "python",
+    "sql",
+    "power bi",
+    "excel",
+    "statistics"
+  ],
+  "AI Engineer": [
+    "python",
+    "machine learning",
+    "deep learning",
+    "nlp",
+    "tensorflow"
+  ],
+  "ML Engineer": [
+    "python",
+    "machine learning",
+    "docker",
+    "aws",
+    "tensorflow"
+  ]
+}
