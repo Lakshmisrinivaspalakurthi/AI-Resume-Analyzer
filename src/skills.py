@@ -1,28 +1,14 @@
-SKILLS = [
+import json
 
-    "python",
-    "sql",
-    "power bi",
-    "tableau",
-    "excel",
+with open("data/skills_db.json") as f:
+    skills_db = json.load(f)
 
-    "machine learning",
-    "deep learning",
-    "nlp",
+ALL_SKILLS = []
 
-    "tensorflow",
-    "pytorch",
+for role in skills_db:
+    ALL_SKILLS.extend(skills_db[role])
 
-    "pandas",
-    "numpy",
-    "scikit-learn",
-
-    "java",
-    "aws",
-    "azure",
-    "git",
-    "docker"
-]
+ALL_SKILLS = list(set(ALL_SKILLS))
 
 def extract_skills(text):
 
@@ -30,7 +16,7 @@ def extract_skills(text):
 
     found = []
 
-    for skill in SKILLS:
+    for skill in ALL_SKILLS:
 
         if skill in text:
             found.append(skill)
